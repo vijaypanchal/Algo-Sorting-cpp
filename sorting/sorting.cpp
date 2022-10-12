@@ -48,14 +48,8 @@ void sort_insertion(T array_in[], int start, int end){
 	}
 }
 
-int main(int argc, char**argv)
+void test_sort_insertion(int N)
 {
-	int N;
-	if(argc == 2) 
-		N = atoi(argv[1]);
-	else 
-		N = MaxSize;	
-
 	cout << "Size of Array Created is " << N << endl;
 
 	int *Array = new int[N];
@@ -73,6 +67,22 @@ int main(int argc, char**argv)
 	print_clock(Algo_Sorting, USE_CLOCK);
 
 	delete [] Array;
+}
+
+
+
+int main(int argc, char**argv)
+{
+	int N;
+	if(argc == 2) 
+		N = atoi(argv[1]);
+	else 
+		N = MaxSize;	
+	cout << endl;
+	cout << "test_sort_insertion(" << N << ")" << endl;
+	test_sort_insertion(N);
+	cout << endl;
+	
 
 	return 0;
 }
